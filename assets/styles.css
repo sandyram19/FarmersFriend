@@ -1,0 +1,8 @@
+.predicted{
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    padding: 0.2rem 0.5em;
+    border-color: #00e1ff;
+    font-weight: 5rem;
+    border-radius: 0.5em;
+}
