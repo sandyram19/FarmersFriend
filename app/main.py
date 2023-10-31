@@ -4,6 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import numpy as np
 from  crop_description import crop_descriptions
+from fertilizers import fertilizer_dict
 def add_sidebar():
     
     data=pd.read_csv('data/Crop_recommendation.csv')
@@ -83,6 +84,13 @@ def add_predictions(input_data):
     st.write("<button class='predicted'>", value, "</button>", unsafe_allow_html=True)
     st.write(f"Probability of {value} being a suitable crop is :",model.predict_proba(input_array_scaled).max())
     st.write(desc)
+
+    st.subheader("Recommended Fertilizers:")
+    st.write("<span style='color: yellow;'>",fertilizer_dict[value],"</span>",unsafe_allow_html=True)
+
+
+
+
 
     return prediction[0]
 def main():
